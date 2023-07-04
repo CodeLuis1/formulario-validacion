@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconectar" href="https://fonts.googleapis.com">
+    <link rel="preconectar" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https: //fonts.googleapis.com/css2? family= Open+Sans & family= Quicksand:wght@300;500;700 & display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+
+        /*analiza el codigo para que puedas entender lo escrito y no olvides suscribirte para que veas los 
+        nuevos videos a y le hice unas mejora a nuestro login  ve al archivo validar.php en el vas encontrar nuestro codigo php por ejemplo cree unos mensajes de alerta para que su validacion sea mas profecional
+        si crees que deberia haber echo un video explicando mejor lo que hice dejamelo saber en los comentarios*/
+           :root{
+            --white:#FFFFFF;
+            --black:#000000;
+            --very-light-pink: #b4adad;
+            --text-input-field: #e6e0e0;
+            --hodpital-green: #0769B7;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+        
+        }
+
+
+        body{
+            margin: 0;
+            font-family: 'Quicksand', sans-serif;
+       
+        }
+        /*aqui centre el formulario*/
+    .login{
+        width:100%;
+        height:100vh;
+        display:grid;
+        place-items: center;
+    }
+
+    .form-container{
+        display: grid;
+        grid-template-rows: auto
+         1fr;
+
+         width: 300px;
+
+    }
+    /*estos son los estilos del logo*/
+    .logo{
+        width: 100px;
+        margin-bottom: 8px;
+        justify-self: center ;
+        display: none;
+    }
+
+    .title{
+
+        font-size: var(--lg);
+        margin-bottom: 12px;
+        text-align: center;
+    }
+
+    .subtitle{
+        color: var(--very-light-pink);
+        font-size: var(--md);
+        font-weight: 300;
+        margin-top: 0;
+        margin-bottom: 32px;
+        text-align: center;
+    }
+    .form{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .label{
+        font-size: var(--sm);
+        font-weight: bold;
+        margin-bottom: 4px;
+    }
+        
+    
+    /*  aqui estan los estilos de los input */
+
+    .input{
+        background-color: var(--text-input-field);
+        border: none;
+        border-radius: 8px;
+        height: 30px;
+        font-size:var(--md);
+        padding: 6px;
+        margin-bottom: 12px;
+    
+    
+    }
+
+    /*los estilos del boton*/
+    .primary-button{
+        background-color: var(--hodpital-green);
+        border-radius: 8px;
+        border: none;
+        color: var(--white);
+        width: 100%;
+        cursor: pointer;
+        font-size: var(--md);
+        font-weight:bold ;
+        height: 50px;
+    
+    }
+    .login-button{
+        margin-top: 14px;
+        margin-bottom: 30px;
+    }
+    @media (max-width :1500px){
+        .logo{
+            display: block;
+        }
+    }
+
+
+</style>
+</head>
+<body>
+    <div class="login">
+        <div class="form-container">
+            <img src="./icons8-avatar-100.png" alt="logo" class="logo">
+
+            <h1 class="title">ingrese su cuenta</h1>
+            <p class="subtitle">ingrese los datos correspondientes para que no haiga errores
+            </p>
+
+            <form action="validar.php"  method="post" class="form">
+                <label for="name" class="label">
+                    <p>ingrese el nombre</p>
+                </label>
+                <input type="name" id="name" name="name" placeholder="ingrese el nombre" 
+                class="input ">
+            
+                <label for="password" class="label">
+                <p>ingrese el password</p>
+                </label>
+                <input type="password" name="pass" id="password" placeholder="********" 
+                class="input ">
+
+
+                <input type="submit" 
+                value="confirm" class="primary-button 
+                login-button">
+            
+            
+            
+            
+            
+            </form>
+
+        </div>
+
+    </div>
+</body>
+</html>
